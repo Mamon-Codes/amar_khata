@@ -166,6 +166,7 @@ body:lang(bn) {
   border: none;
   cursor: pointer;
   padding: 5px;
+  z-index: 1000;
 }
 
 .mobile-menu-toggle span {
@@ -952,6 +953,18 @@ section {
 
   .mobile-menu-toggle {
     display: flex;
+  }
+
+  .header-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    z-index: 1001;
+  }
+
+  .language-toggle {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.875rem;
+    white-space: nowrap;
   }
 
   .header-actions .btn {
