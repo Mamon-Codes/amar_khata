@@ -29,7 +29,17 @@ const Hero = () => {
                             </svg>
                             {content.hero.downloadBtn[language]}
                         </a>
+                    </div>
 
+                    <div className="hero-center">
+                        <div className="hero-circle-bg"></div>
+                        <div className="hero-image">
+                            <div className="phone-mockup">
+                                <div className="phone-screen">
+                                    <img src="/screenshots/screenshot-1.jpg" alt="Amar Khata App" className="screenshot-main" />
+                                </div>
+                            </div>
+                        </div>
                         <div className="hero-stats">
                             <div className="stat">
                                 <div className="stat-value">{content.hero.stats.downloads[language]}</div>
@@ -39,18 +49,6 @@ const Hero = () => {
                                 <div className="stat-value">{content.hero.stats.rating[language]}</div>
                                 <div className="stat-label">{content.hero.stats.ratingLabel[language]}</div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="hero-image">
-                        <div className="phone-mockup">
-                            <div className="phone-screen">
-                                <img src="/screenshots/screenshot-1.jpg" alt="Amar Khata App" className="screenshot-main" />
-                            </div>
-                        </div>
-                        <div className="floating-screenshots">
-                            <img src="/screenshots/screenshot-2.jpg" alt="Bank Accounts" className="floating-screen floating-screen-1" />
-                            <img src="/screenshots/screenshot-3.jpg" alt="Notes" className="floating-screen floating-screen-2" />
                         </div>
                     </div>
                 </div>

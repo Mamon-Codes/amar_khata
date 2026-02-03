@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
@@ -35,8 +36,11 @@ const Footer = () => {
                     <div className="footer-col">
                         <h3 className="footer-title">{content.footer.links.title[language]}</h3>
                         <div className="footer-links">
-                            <a href="#" className="footer-link">{content.footer.links.privacy[language]}</a>
-                            <a href="#" className="footer-link">{content.footer.links.terms[language]}</a>
+                            <Link to="/privacy-policy" className="footer-link">{content.footer.links.privacy[language]}</Link>
+                            <Link to="/terms-conditions" className="footer-link">{content.footer.links.terms[language]}</Link>
+                            <Link to="/refund-policy" className="footer-link">
+                                {language === 'bn' ? 'রিফান্ড পলিসি' : 'Refund Policy'}
+                            </Link>
                             <a href="#" className="footer-link">{content.footer.links.facebook[language]}</a>
                         </div>
                     </div>

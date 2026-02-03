@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
 
@@ -18,10 +19,10 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="header-content">
-                    <div className="logo">
+                    <Link to="/" className="logo">
                         <img src="/logo.png" alt="Amar Khata" />
                         <span>{content.hero.title[language]}</span>
-                    </div>
+                    </Link>
 
                     <nav className={`nav ${isMenuOpen ? 'active' : ''}`}>
                         <button onClick={() => scrollToSection('features')} className="nav-link">

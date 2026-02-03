@@ -1,5 +1,10 @@
 import { useLanguage } from '../contexts/LanguageContext';
 import { content } from '../data/content';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 const Screenshots = () => {
     const { language } = useLanguage();
@@ -21,18 +26,33 @@ const Screenshots = () => {
                     </p>
                 </div>
 
-                <div className="screenshots-showcase">
+                <Swiper
+                    modules={[Navigation, Pagination, Autoplay]}
+                    spaceBetween={30}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                    autoplay={{ delay: 3000, disableOnInteraction: false }}
+                    breakpoints={{
+                        640: { slidesPerView: 2 },
+                        768: { slidesPerView: 3 },
+                        1024: { slidesPerView: 4 }
+                    }}
+                    className="screenshots-carousel"
+                >
                     {screenshots.map((screenshot, index) => (
-                        <div key={index} className="screenshot-item" data-index={index}>
-                            <div className="screenshot-phone">
-                                <div className="screenshot-screen">
-                                    <img src={screenshot.src} alt={screenshot.title[language]} />
+                        <SwiperSlide key={index}>
+                            <div className="screenshot-item" data-index={index}>
+                                <div className="screenshot-phone">
+                                    <div className="screenshot-screen">
+                                        <img src={screenshot.src} alt={screenshot.title[language]} />
+                                    </div>
                                 </div>
+                                <p className="screenshot-caption">{screenshot.title[language]}</p>
                             </div>
-                            <p className="screenshot-caption">{screenshot.title[language]}</p>
-                        </div>
+                        </SwiperSlide>
                     ))}
-                </div>
+                </Swiper>
             </div>
         </section>
     );
