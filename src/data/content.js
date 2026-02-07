@@ -25,7 +25,7 @@ export const content = {
         stats: {
             downloads: { bn: '১০০+', en: '100+' },
             downloadsLabel: { bn: 'ডাউনলোড', en: 'Downloads' },
-            rating: { bn: '৩+', en: '3+' },
+            rating: { bn: '৫', en: '5' },
             ratingLabel: { bn: 'রেটিং', en: 'Rating' }
         }
     },
@@ -154,7 +154,7 @@ export const content = {
             title: { bn: 'লিংক', en: 'Links' },
             privacy: { bn: 'গোপনীয়তা নীতি', en: 'Privacy Policy' },
             terms: { bn: 'শর্তাবলী', en: 'Terms & Conditions' },
-            facebook: { bn: 'ফেসবুক গ্রুপ', en: 'Facebook Group' }
+            facebook: { bn: 'ফেসবুক', en: 'Facebook' }
         },
         developer: {
             title: { bn: 'ডেভেলপার', en: 'Developer' },

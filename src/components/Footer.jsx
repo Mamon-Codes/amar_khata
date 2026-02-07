@@ -41,7 +41,7 @@ const Footer = () => {
                             <Link to="/refund-policy" className="footer-link">
                                 {language === 'bn' ? 'রিফান্ড পলিসি' : 'Refund Policy'}
                             </Link>
-                            <a href="#" className="footer-link">{content.footer.links.facebook[language]}</a>
+                            <a href="https://www.facebook.com/amarkhatabd" target="_blank" rel="noopener noreferrer" className="footer-link">{content.footer.links.facebook[language]}</a>
                         </div>
                     </div>
 
